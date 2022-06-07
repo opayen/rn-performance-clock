@@ -14,6 +14,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  Button,
   useColorScheme,
   View,
 } from 'react-native';
@@ -66,6 +67,10 @@ const App: () => Node = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <Button
+          onPress={() => console.log(global.performance.now())}
+          title="performance.now()"
+        />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
